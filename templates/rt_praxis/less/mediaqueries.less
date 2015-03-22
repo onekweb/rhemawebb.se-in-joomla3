@@ -1,0 +1,369 @@
+/**
+* @version   $Id: mediaqueries.less 12329 2013-07-31 10:45:33Z arifin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2014 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+// Large Mode
+@media only screen and (min-width: 1200px) {
+	.visible-large {
+		display: inherit !important;
+	}
+	.hidden-large {
+		display: none !important;
+	}
+	.visible-desktop {
+		display: inherit !important;
+	}
+	.hidden-desktop {
+		display: none !important;
+	}
+}
+
+// Desktop Modes
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+	.visible-large {
+		display: none !important;
+	}
+	.hidden-large {
+		display: inherit !important;
+	}
+	.visible-desktop {
+		display: inherit !important;
+	}
+	.hidden-desktop {
+		display: none !important;
+	} 
+
+	body {
+		// Heading
+		h1 {font-size: 210%;}
+		h2, .componentheading, .title {font-size: 160%;}
+		h3 {font-size: 130%;}
+		h4 {font-size: 120%;}
+		h5 {font-size: 110%;}
+	}
+
+	body {
+		#rt-sidemod {
+			&.rt-inside-left {
+				margin-left: -460px;
+			}
+			&.rt-inside-right {
+				margin-right: -460px;
+			}			
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+	.visible-tablet {
+		display: inherit !important;
+	}
+	.hidden-tablet {
+		display: none !important;
+	}
+	.hidden-desktop {
+		display: inherit !important;
+	}
+	.visible-desktop {
+		display: none !important;
+	}
+	.visible-large {
+		display: none !important;
+	}
+	.hidden-large {
+		display: inherit !important;
+	}	
+
+	body {
+		// Heading
+		h1 {font-size: 185%;}
+		h2, .componentheading, .title {font-size: 145%;}
+		h3 {font-size: 115%;}
+		h4 {font-size: 110%;}
+		h5 {font-size: 105%;}
+	}
+
+	body {
+		// RokSprocket Mosaic
+		.sprocket-mosaic-columns-1 li, .sprocket-mosaic-columns-2 li, .sprocket-mosaic-columns-3 li, .sprocket-mosaic-columns-4 li, .sprocket-mosaic-columns-5 li, .sprocket-mosaic-columns-6 li {
+			width: 33.33%;
+		}	
+
+		// RokSprocket Strips
+		.sprocket-strips-container.cols-1 li, .sprocket-strips-container.cols-2 li, .sprocket-strips-container.cols-3 li, .sprocket-strips-container.cols-4 li, .sprocket-strips-container.cols-5 li, .sprocket-strips-container.cols-6 li {
+			width: 25% !important;
+		}
+
+		#rt-sidemod {
+			top: 300px;
+			&.rt-inside-left {
+				margin-left: -364px;
+			}
+			&.rt-inside-right {
+				margin-right: -364px;
+			}			
+		}	
+
+		// Typography
+		.fp-roksprocket-headlines {
+			font-size: 1.8em;
+			margin-top: 25px;
+		}	
+		.promo1 {
+			font-size: 2.8em;
+		}
+		.promo2 {
+			font-size: 1.8em;
+		}
+		.promo3 {
+			font-size: 1.2em;
+		}
+	}	
+}
+
+// Mobile Modes
+@media (max-width: 767px) {
+	body {
+    	padding: 0;
+  	}
+	.visible-phone {
+		display: inherit !important;
+	}
+	.hidden-phone {
+		display: none !important;
+	}
+	.hidden-desktop {
+		display: inherit !important;
+	}
+	.visible-desktop {
+		display: none !important;
+	}
+	.hidden-large {
+		display: inherit !important;
+	}
+	.visible-large {
+		display: none !important;
+	}
+
+	// Logo
+	#rt-logo {
+		margin: 0 auto;
+	}
+
+	// Joomla Core
+	body .component-content {
+		.column-1, .column-2, .column-3, .column-4 {
+			width: 100% !important;
+			float: none !important;
+			margin: 0 !important;
+		}
+	}
+
+	body {
+		// Menu
+		.menu-block {
+			margin: 5px 0 0 0;
+			.gf-menu-device-container {
+				margin: 0 auto !important;
+				width: 75%;
+			}
+		}
+
+		// RokSprocket Mosaic
+		.sprocket-mosaic-columns-1 li, .sprocket-mosaic-columns-2 li, .sprocket-mosaic-columns-3 li, .sprocket-mosaic-columns-4 li, .sprocket-mosaic-columns-5 li, .sprocket-mosaic-columns-6 li {
+			width: 100% !important;
+		}
+
+		// RokSprocket Strips
+		.sprocket-strips-container.cols-1 li, .sprocket-strips-container.cols-2 li, .sprocket-strips-container.cols-3 li, .sprocket-strips-container.cols-4 li, .sprocket-strips-container.cols-5 li, .sprocket-strips-container.cols-6 li {
+			width: 50% !important;
+		}		
+		
+		// RokSprocket Tabs
+		.sprocket-tabs-nav li .sprocket-tabs-inner {
+			padding: 10px;
+		}
+
+		// RokSprocket Headlines
+		.fp-roksprocket-headlines {
+			font-size: 1.5em;
+			margin: 0 30px 15px;
+			padding: 0;
+		}	
+
+		// SideMod
+		#rt-sidemod {
+			display: none;
+		}
+
+		// Sidenav Spacing
+		.fp-sidenav-spacing, &.menu-home #rt-footer-surround .rt-container .rt-alpha .rt-block {
+		    padding-left: 15px !important;
+		    padding-right: 15px !important;
+		}
+
+		// Social Buttons
+		#rt-navigation .rt-social-buttons {
+			margin: 0 15px 0 0;
+		}
+
+		// Heading
+		h1 {font-size: 165%;}
+		h2, .componentheading, .title {font-size: 125%;}
+		h3 {font-size: 105%;}
+		h4 {font-size: 100%;}
+		h5 {font-size: 95%;}
+
+		.promo1 {
+			font-size: 2.0em;
+		}
+		.promo2 {
+			font-size: 1.5em;
+		}
+		.promo3 {
+			font-size: 1.0em;
+		}		
+	}
+
+	// Features
+	#gantry-totop {
+		margin: 0 auto;
+		text-align: center;
+		width: 100%;
+	}
+
+	// Extras
+	.gantry-width-20, .gantry-width-25, .gantry-width-30, .gantry-width-33, .gantry-width-40, .gantry-width-50, .gantry-width-60, .gantry-width-66, .gantry-width-70, .gantry-width-75, .gantry-width-80 {
+		width: 100%;
+	}
+	.gantry-width-spacer {
+		margin: 5px;
+	}
+
+	.row {
+		margin: 0;
+		display: block;
+
+		.cell {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.form-horizontal {
+		.control-group {
+			.control-label {
+				float:none;
+				width: auto;
+				text-align:left;
+			}
+			.controls {
+				margin-left: 0;
+			}
+		}
+	}
+	select {
+		width: 100%;
+	}
+}
+
+// Small Screen Mobile Modes
+@media only screen and (max-width: 480px) {
+	body {
+		// Heading and Title
+		h1 {
+			font-size: 205%;
+		}
+		h2, .title, .component-content h2 {
+			font-size: 155%;
+			line-height: 30px;
+		}
+		h3 {
+			font-size: 130%;
+		}
+		h4 {
+			font-size: 95%;
+		}
+		h5 {
+			font-size: 90%;
+		}	
+
+		// Container 
+		.rt-container {
+			width: 100%;
+		}	
+
+		// Menu
+		.menu-block {
+			margin: 5px 0 0 0;
+			.gf-menu-device-container {
+				margin: 0 10px 0 auto !important;
+				width: 75% !important;
+				.gf-menu.l1 > li > .item, .gf-menu .item {
+					font-size: 13px !important;
+				}
+			}
+		}
+
+		// RokSprocket Mosaic
+		.sprocket-mosaic-columns-1 li, .sprocket-mosaic-columns-2 li, .sprocket-mosaic-columns-3 li, .sprocket-mosaic-columns-4 li, .sprocket-mosaic-columns-5 li, .sprocket-mosaic-columns-6 li {
+			width: 100% !important;
+		}
+
+		// RokSprocket Strips
+		.sprocket-strips-container.cols-1 li, .sprocket-strips-container.cols-2 li, .sprocket-strips-container.cols-3 li, .sprocket-strips-container.cols-4 li, .sprocket-strips-container.cols-5 li, .sprocket-strips-container.cols-6 li {
+			width: 100% !important;
+		}					
+
+		// RokSprocket Tabs
+		.sprocket-tabs-nav li {
+			margin-right: 8px;
+			.sprocket-tabs-inner {
+				font-size: 8px;
+				padding: 2px 5px;
+			}
+		}
+
+		// RokSprocket Headlines
+		.fp-roksprocket-headlines {
+			font-size: 1.3em;
+		}	
+
+		.roksprocket-ellipsis {
+			display: none;
+		}
+	}
+}	
+
+// RokSprocket Mosaic MediaQueries
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+	body {
+		.sprocket-mosaic-columns-1 li, .sprocket-mosaic-columns-2 li, .sprocket-mosaic-columns-3 li, .sprocket-mosaic-columns-4 li, .sprocket-mosaic-columns-5 li, .sprocket-mosaic-columns-6 li {width: 50%;}
+	}
+}
+
+// RokSprocket Strips MediaQueries
+@media 
+only screen and (min-width: 1195px) and (max-width: 1315px),
+only screen and (min-width: 960px) and (max-width: 1070px),
+only screen and (min-width: 768px) and (max-width: 880px),
+only screen and (min-width: 482px) and (max-width: 600px),
+only screen and (max-width: 480px) {
+	body {
+		.sprocket-strips {
+			.sprocket-strips-arrows .arrow {
+				background: #000000;
+				color: #ffffff;
+				&.prev {
+					left: 0px;
+				}
+				&.next {
+					right: 0px;
+				}
+			}
+		}	
+	}
+}

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+        <name>List Module for VideoFlow</name> 
+        <author>Kirungi Fred Fideri</author> 
+        <creationDate>June 2010</creationDate> 
+        <copyright>All rights reserved by Kirungi Fred Fideri/Fidsoft 2010.</copyright> 
+        <license>GPL 2.0</license> 
+        <authorEmail>fideri@fidsoft.com</authorEmail> 
+        <authorUrl>http://www.fidsoft.com</authorUrl> 
+        <version>1.2.0</version> 
+        <description>MOD_LISTMODULE_FOR_VIDEOFLOW_XML_DESCRIPTION</description>
+ 
+        <files>
+                <filename module="mod_listmodule_for_videoflow">mod_listmodule_for_videoflow.php</filename>
+                <filename>index.html</filename>
+                <filename>helper.php</filename>
+                <folder>tmpl</folder>
+                <folder>language</folder>
+		
+        </files>
+ 
+  <languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_listmodule_for_videoflow.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_listmodule_for_videoflow.sys.ini</language>
+	</languages>
+	  
+	<params>
+		<param type="spacer" default="VF_GENERAL_SETTINGS" />
+		<param name="modloc" type="list" default="auto" label="VF_MODULE_LOCATION" description="VF_MODULE_LOC">
+			<option value="auto">VF_AUTO</option>
+			<option value="joomla">VF_JOOMLA</option>
+			<option value="facebook">VF_FACEBOOK</option>
+ 		</param>	
+		<param name="listtype" type="list" default="latest" label="VF_LIST_TYPE" description="">
+			<option value="categories">VF_CATEGORIES</option>
+			<option value="latest">VF_LATEST</option>
+      <option value="playing">VF_BEING_WATCHED</option> 
+			<option value="popular">VF_POPULAR</option>
+			<option value="featured">VF_FEATURED</option>
+			<option value="hirated">VF_HIGHEST_RATED</option>
+			<option value="random">VF_RANDOM</option>
+			<option value="order">VF_ORDERED</option>
+		</param>									
+		<param name="cats" type="text" default="" label="VF_CATEGORIES" description="VF_MEDIA_CATEGORIES" />	
+		<param name="vfcolumns" type="list" default="3" label="VF_COLUMN_COUNT" description="VF_COLUMN_DESC">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="6">6</option>
+		</param>
+		<param name="listlimit" type="text" default="5" label="VF_MEDIA_FILE_COUNT" description="VF_NUMBER_MEDIA_FILES_DESC" />
+		<param name="seemore" type="radio" default="1" label="VF_SHOW_SEE_MORE" description="VF_SHOW_SEE_MORE_DESC">
+			<option value="0">VF_NO</option>
+			<option value="1">VF_YES</option>
+		</param>
+		<param name="stexta" type="list" default="pull-right" label="VF_SEE_MORE_ALIGN" description="VF_SEE_MORE_ALIGN_DESC">
+			<option value="text-center">VF_CENTRE</option>
+			<option value="pull-left">VF_LEFT</option>
+			<option value="pull-right">VF_RIGHT</option>
+		</param>	
+		<param type="spacer" default="VF_INTERNAL_LABEL_SETTINGS" />
+		<param name="autotitle" type="radio" default="1" label="VF_INTERNAL_LABEL" description="VF_INTERNAL_LABEL_DESC">
+			<option value="0">VF_NO</option>
+			<option value="1">VF_YES</option>
+		</param>
+		<param name="ltexta" type="list" default="pull-left" label="VF_LABEL_TEXT_ALIGNMENT" description="VF_LABEL_TEXT_ALIGNMENT_DESC">
+			<option value="text-center">VF_CENTRE</option>
+			<option value="pull-left">VF_LEFT</option>
+			<option value="pull-right">VF_RIGHT</option>
+		</param>	
+		<param type="spacer" default="VF_MEDIA_INFO_SETTINGS" /> 		
+		<param name="titlepos" type="list" default="bottom" label="VF_TITLE_POSITION" description="VF_TITLE_OPTIONS">
+			<option value="notitle">VF_NO_TITLE</option>
+			<option value="top">VF_TOP</option>
+			<option value="bottom">VF_BOTTOM</option>
+		</param>	
+		<param name="titlelength" type="text" default="12" label="VF_TITLE_LENGTH" description="VF_MEDIA_TITLE_LENGTH" />  
+		<param name="titlelevel" type="list" default="h4" label="VF_TITLE_LEVEL" description="VF_TITLE_LEVEL_DESC">
+			<option value="h2">H2</option>
+			<option value="h3">H3</option>
+			<option value="h4">H4</option>
+			<option value="h5">H5</option>
+			<option value="h6">H6</option>
+		</param>	  
+		<param name="showdesc" type="list" default="0" label="VF_SHOWDESC" description="VF_SHOWDESC_DESC">	
+			<option value="0">VF_NO</option>
+			<option value="1">VF_YES</option>
+		</param>
+		<param name="desclength" type="text" default="40" label="VF_DESC_LENGTH" description="VF_MEDIA_DESC_LENGTH" />  
+		<param type="spacer" default="VF_THUMBNAIL_SETTINGS" /> 		
+		<param name="boxheight" type="text" default="" label="VF_BOXHEIGHT" description="VF_BOXHEIGHT_PIXELS" />
+    <param name="boxmaxwidth" type="text" default="" label="VF_BOXMAXWIDTH" description="VF_BOXMAXWIDTH_PIXELS" />			
+		<param name="thumbheight" type="text" default="210" label="VF_THUMBNAIL_HEIGHT" description="VF_HEIGHT_PIXELS" />			
+		<param type="spacer" default="VF_LIGHTBOX_SETTINGS" />
+		<param name="lightboxsys" type="list" default="multibox" label="VF_LIGHTBOX_SYSTEM" description="">
+      <option value="colorbox">ColorBox</option>
+			<option value="multibox">MultiBox</option>
+			<option value="joomla">Joomla</option>
+			<option value="none">VF_NONE</option>
+		</param>
+		<param name="lightboxmode" type="list" default="0" label="VF_LIGHTBOX_MODE" description="VF_LIGHTBOX_MODE_DESC">	
+			<option value="0">VF_DUAL</option>
+			<option value="1">VF_FULL</option>
+		</param>
+		<param name="lboxh" type="text" default="60" label="VF_LIGHTBOX_HEIGHT_OFFSET" description="VF_ADJUSTS_HEIGHT_LIGHTBOX" />	
+		<param name="lboxw" type="text" default="8" label="VF_LIGHTBOX_WIDTH_OFFSET" description="VF_AJUSTS_WIDTH_LIGHTBOX" />	  
+		<param type="spacer" default="VF_MODULE_STYLE_SETTINGS" />
+    <param name="bootstrap" type="radio" default="0" label="VF_LOADBOOTSRAP" description="VF_LOADBOOTSTRAP_DESC">
+			<option value="0">VF_NO</option>
+			<option value="1">VF_YES</option>
+		</param>
+		<param name="moduleclass_sfx" type="text" default="" label="VF_MODULE_CLASS_SUFFIX" description="VF_MODULE_CLASS_DESC" />
+	</params>
+	<config>
+	<fields name="params">
+		<fieldset name="basic">
+		<field type="spacer" default="VF_GENERAL_SETTINGS" />
+		<field name="modloc" type="list" default="auto" label="VF_MODULE_LOCATION" description="VF_MODULE_LOC">
+			<option value="auto">VF_AUTO</option>
+			<option value="joomla">VF_JOOMLA</option>
+			<option value="facebook">VF_FACEBOOK</option>
+ 		</field>	
+		<field name="vfcolumns" type="list" default="3" label="VF_COLUMN_COUNT" description="VF_COLUMN_DESC">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="6">6</option>
+		</field>
+		<field name="listlimit" type="text" default="6" label="VF_MEDIA_FILE_COUNT" description="VF_NUMBER_MEDIA_FILES_DESC" />
+		<field name="listtype" type="list" default="latest" label="VF_LIST_TYPE" description="">
+			<option value="categories">VF_CATEGORIES</option>
+			<option value="latest">VF_LATEST</option>
+      <option value="playing">VF_BEING_WATCHED</option> 
+			<option value="popular">VF_POPULAR</option>
+			<option value="poptoday">VF_POPULAR_TODAY</option>
+			<option value="popthisweek">VF_POPULAR_THISWEEK</option>
+			<option value="popthismonth">VF_POPULAR_THISMONTH</option>
+			<option value="featured">VF_FEATURED</option>
+			<option value="hirated">VF_HIGHEST_RATED</option>
+			<option value="random">VF_RANDOM</option>
+			<option value="order">VF_ORDERED</option>
+		</field>	
+		<field type="spacer" default="VF_LIGHTBOX_SETTINGS" />
+		<field name="lightboxsys" type="list" default="colorbox" label="VF_LIGHTBOX_SYSTEM" description="">
+		<option value="colorbox">ColorBox</option>
+		<option value="multibox">MultiBox</option>
+			<option value="joomla">Joomla</option>
+			<option value="none">VF_NONE</option>
+		</field>
+		<field name="lightboxmode" type="list" default="0" label="VF_LIGHTBOX_MODE" description="VF_LIGHTBOX_MODE_DESC">	
+			<option value="0">VF_DUAL</option>
+			<option value="1">VF_FULL</option>
+		</field>
+		<field name="lboxh" type="text" default="60" label="VF_LIGHTBOX_HEIGHT_OFFSET" description="VF_ADJUSTS_HEIGHT_LIGHTBOX" />	
+		<field name="lboxw" type="text" default="8" label="VF_LIGHTBOX_WIDTH_OFFSET" description="VF_AJUSTS_WIDTH_LIGHTBOX" />	  
+		</fieldset>
+		<fieldset name="advanced">
+		<field name="cats" type="text" default="" label="VF_CATEGORIES" description="VF_MEDIA_CATEGORIES" />				
+		<field type="spacer" default="VF_INTERNAL_LABEL_SETTINGS" />
+		<field name="autotitle" type="radio" default="1" label="VF_INTERNAL_LABEL" description="VF_INTERNAL_LABEL_DESC">
+			<option value="0">VF_NO</option>
+			<option value="1">VF_YES</option>
+		</field>
+		<field name="ltexta" type="list" default="pull-left" label="VF_LABEL_TEXT_ALIGNMENT" description="VF_LABEL_TEXT_ALIGNMENT_DESC">
+			<option value="text-center">VF_CENTRE</option>
+			<option value="pull-left">VF_LEFT</option>
+			<option value="pull-right">VF_RIGHT</option>
+		</field>			
+		<field type="spacer" default="VF_MEDIA_INFO_SETTINGS" /> 		
+		<field name="titlepos" type="list" default="bottom" label="VF_TITLE_POSITION" description="VF_TITLE_OPTIONS">
+			<option value="notitle">VF_NO_TITLE</option>
+			<option value="top">VF_TOP</option>
+			<option value="bottom">VF_BOTTOM</option>
+		</field>	
+		<field name="titlelength" type="text" default="20" label="VF_TITLE_LENGTH" description="VF_MEDIA_TITLE_LENGTH" />  
+		<field name="titlelevel" type="list" default="h4" label="VF_TITLE_LEVEL" description="VF_TITLE_LEVEL_DESC">
+			<option value="h2">H2</option>
+			<option value="h3">H3</option>
+			<option value="h4">H4</option>
+			<option value="h5">H5</option>
+			<option value="h6">H6</option>
+		</field>	  
+		<field name="showdesc" type="list" default="0" label="VF_SHOWDESC" description="VF_SHOWDESC_DESC">	
+			<option value="0">VF_NO</option>
+			<option value="1">VF_YES</option>
+		</field>
+		<field name="desclength" type="text" default="40" label="VF_DESC_LENGTH" description="VF_MEDIA_DESC_LENGTH" /> 
+		<field name="seemore" type="radio" default="1" label="VF_SHOW_SEE_MORE" description="VF_SHOW_SEE_MORE_DESC">
+			<option value="0">VF_NO</option>
+			<option value="1">VF_YES</option>
+		</field>
+		<field name="stexta" type="list" default="pull-right" label="VF_SEE_MORE_ALIGN" description="VF_SEE_MORE_ALIGN_DESC">
+			<option value="text-center">VF_CENTRE</option>
+			<option value="pull-left">VF_LEFT</option>
+			<option value="pull-right">VF_RIGHT</option>
+		</field>	
+		<field type="spacer" default="VF_ITEMBOX_SETTINGS" /> 		
+		<field name="boxheight" type="text" default="" label="VF_BOXHEIGHT" description="VF_BOXHEIGHT_PIXELS" />
+    <field name="boxmaxwidth" type="text" default="" label="VF_BOXMAXWIDTH" description="VF_BOXMAXWIDTH_PIXELS" />					
+		<field name="thumbheight" type="text" default="210" label="VF_THUMBNAIL_HEIGHT" description="VF_HEIGHT_PIXELS" />			
+		<field type="spacer" default="VF_MODULE_STYLE_SETTINGS" />	
+    <field name="bootstrap" type="radio" default="0" label="VF_LOADBOOTSRAP" description="VF_LOADBOOTSTRAP_DESC">
+			<option value="0">VF_NO</option>
+			<option value="1">VF_YES</option>
+		</field>
+		<field name="moduleclass_sfx" type="text" default="" label="VF_MODULE_CLASS_SUFFIX" description="VF_MODULE_CLASS_DESC" />
+		</fieldset>
+	</fields>
+	</config>
+</install>

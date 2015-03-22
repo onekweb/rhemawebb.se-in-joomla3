@@ -1,0 +1,469 @@
+/**
+ * @version   $Id: template.less 12376 2013-08-01 13:24:29Z arifin $
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2014 RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+
+// Core
+body {
+	-webkit-backface-visibility: hidden;
+}
+a {
+	.transition(all 0.2s ease-out);
+}
+#rt-transition.rt-hidden {
+	opacity: 0;
+}
+#rt-transition.rt-visible {
+	opacity: 1;
+	.transition(opacity 0.4s ease-in);
+}
+#rt-page-surround {
+	overflow: hidden;
+}
+
+// Fonts
+.font-family-praxis {
+	// Heading and Title
+	h1, h2, h3, h4, h5, h6, .title, .component-content h2, ul.menu {
+		font-family: @praxis-font-light;
+		font-weight: normal;
+	}
+	// Specific Typography
+	strong, .notice, .message, .success, .info, .error, .warning, 
+	.sprocket-features-title, .sprocket-mosaic-title, .sprocket-tabs-text, .sprocket-lists-title, .sprocket-strips-title , 
+	dt, .table th, th.title, legend, fieldset dd, li.author, li.date, li.comments, .showHere, .highlight, .word_input, .word_label, .search_legend, .result_title, .pagenavcounter, .counter, .tip-title, .system-unpublished,
+	.button, .readon, button.validate, p.readmore a, #member-profile a, #member-registration a, .formelm-buttons button, .controls .btn, .logout-button .btn, #gantry-totop, .pagenav a,
+.sprocket-mosaic-header li, .sprocket-mosaic-tags li, .sprocket-readmore, .sprocket-mosaic-loadmore, .sprocket-lists-title .indicator, &.roksearch_results a.clr {
+		font-family: @praxis-font-bold;
+		font-weight: normal !important;		
+	}	
+}
+
+// Side Module
+#rt-sidemod {
+    position: fixed;
+    top: 260px;
+    &.rt-inside-left {
+	    left: 50%;
+	    margin-left: -580px;    	
+    }
+    &.rt-inside-right {
+	    right: 50%;
+	    margin-right: -580px;
+    }    
+    &.rt-outside-left {
+	    left: 0;   	
+    } 
+    &.rt-outside-right {
+	    right: 0;   	
+    }        
+    .rt-sidewrapper {
+    	position: relative;
+    	display: inline-block;
+    	width: 150px;
+    }
+}
+
+// Heading and Title
+h1 {
+	font-size: 260%;
+}
+h2, .title, .component-content h2 {
+	font-size: 230%;
+}
+h3 {
+	font-size: 185%;
+}
+h4 {
+	font-size: 140%;
+}
+h5 {
+	font-size: 120%;
+}
+
+// Logo
+#rt-logo {
+	width: 81px;
+	height: 113px;
+	display: block;
+}
+
+// Navigation
+.menu-block {
+	padding: 0 15px;
+	margin: 0 10px;
+}
+.rt-menu-mobile {
+	text-align: center;
+	padding: 0 0 15px 0;
+}
+
+// SideBar
+[id*="rt-sidebar"] {
+	margin: 30px 0;
+}
+
+// Menu Module
+ul.menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	ul {
+		list-style: none;
+	}
+	li {
+		margin-bottom: 8px;
+		a, .item, .separator {
+			display: block;
+			font-size: @base-font-size + 2;
+			font-weight: bold;
+		}
+		a:before, .item:before, .separator:before {
+			content: "\f111";
+			font-family: FontAwesome;
+			margin-right: 10px;
+			display: inline;
+			vertical-align: middle;
+			font-size: @base-font-size;
+			font-weight: normal;
+		}
+	}
+	li.active.current, li#current.active {
+		> a:before, > .item:before, > .separator:before {
+			content: "\f054";
+			font-size: @base-font-size + 2;
+			margin-right: 11px;
+		}
+	}
+	ul.small {
+		font-size: 14px;
+	}
+}
+
+// Copyright
+#rt-copyright {
+	font-size: @base-font-size - 2;
+}
+
+// Buttons
+.button, .readon, .pager a, .pager span, .pagenav li a, button.validate, p.readmore a, #member-profile a, #member-registration a, .formelm-buttons button, .controls .btn, .logout-button .btn, #gantry-totop, .pagenav a,
+.sprocket-mosaic-header li, .sprocket-readmore, .sprocket-mosaic-loadmore, &.roksearch_results a.clr, #k2Container .k2ReadMore, #k2Container #submitCommentButton, span.itemEditLink a {
+	display: inline-block;
+	padding: 10px 20px;
+	line-height: @base-line-height - 5;
+	font-size: @base-font-size - 2;
+	text-align: center;
+	text-transform: uppercase;
+	.border-radius(5px);
+	border: 1px solid;	
+}
+.readon:after {
+	font-family: Arial;
+	font-weight: bold;
+	content: "+";
+	margin-left: 5px;
+}
+
+// Module and Title Variations
+[class^="title"], &[class*=" title"] {
+	.module-title {
+		.border-radius(5px);
+		margin: -15px -15px 15px -15px;
+		.title {
+			padding: 0 15px;
+			line-height: @base-line-height + 10;
+		}
+	}
+	&[class^="box"], &[class*=" box"] {
+		.module-title {
+			.border-radius(5px 5px 0 0);
+			margin: -15px -15px 15px -15px;
+		}	
+	}	
+}
+[class^="box"], [class*=" box"] {
+	.border-radius(5px);
+	.module-title {
+		margin-top: -15px;
+	}	
+	.module-content {
+		[class*="custom"] {
+			background: none !important;
+			border: none !important;
+			.box-shadow(none) !important;
+		}
+	}	
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	&.rt-block {	
+		display: block;
+		&:before {
+			display: none;
+		}
+	}
+	&[class^="title"], &[class*=" title"] {	
+		.module-content {
+			[class^="icon-"], [class*=" icon-"] {
+				display: block;
+				line-height: 1.7em !important;
+				&:before {
+					display: none !important;
+				}				
+			}
+		}		
+	}	
+	&[class^="box"], &[class*=" box"] {	
+		.module-content {
+			[class^="icon-"], [class*=" icon-"] {
+				display: block;
+				line-height: 1.7em !important;				
+				&:before {
+					display: none !important;
+				}
+			}
+		}
+	}
+	.module-title {
+		margin-top: -15px;
+		.title-icon {
+			font-size: @base-font-size + 10;
+			margin-right: 8px;
+			vertical-align: middle;
+			line-height: @base-line-height - 6;
+		}
+	}
+	.module-content {
+		line-height: 1.7em;
+	}		
+}
+
+.title4 {
+	.title {
+		margin-left: 25px;
+		padding-top: 5px !important;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 14px;
+			left: 0;
+			width: 30px;
+			height: 30px;
+			.border-radius(4px);
+		}
+		&:after {
+			font-family: FontAwesome;
+			font-size: 80%;
+			content: "\f105";
+			position: absolute;
+			left: 13px;
+			top: 12px;
+		}
+	}
+	&[class^="box"], &[class*=" box"] {
+		.title {
+			margin-left: 40px;
+			&:before {
+				left: 15px;
+			}
+			&:after {
+				left: 28px;
+			}
+		}
+	}	
+}
+
+.rt-shadow {
+	position: relative;
+	left: 3px;		
+	.border-radius(5px);
+}
+
+.rt-bevel {	
+	.border-radius(5px);
+}
+
+.rt-square {
+	&.rt-block {
+		.border-radius(0) !important;
+	}
+}
+
+// Extras
+.gantry-example {
+	position: relative;
+	margin: 15px 0;
+	padding: 39px 19px 14px;
+	*padding-top: 19px;
+	background-color: @body-background2;
+	border: 1px solid @body-border3;
+	.border-radius(4px);
+	.table, .well, blockquote {
+		margin-bottom: 5px;
+	}
+	.lead {
+		font-size: 18px;
+		line-height: 24px;
+	}
+	> p:last-child {
+		margin-bottom: 0;
+	}
+	+ .prettyprint {
+		margin-top: -20px;
+		padding-top: 15px;
+	}
+}
+.gantry-example:after {
+	content: "Example";
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	padding: 3px 7px;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: @body-background;
+	border: 1px solid @body-border3;
+	color: #9da0a4;
+	.border-radius(4px 0 4px 0);
+	font-style: normal;
+}
+form.gantry-example {
+	padding-bottom: 19px;
+}
+
+// Images
+.gantry-img img, img.gantry-img {
+	max-width: 100%;
+	height: auto;
+}
+
+// Branding
+.powered-by {
+	display: block;
+	width: 177px;
+	height: 25px;
+	margin: 0 auto;
+	opacity: 0.8;
+	.transition(opacity 0.2s ease-in);
+	&:hover {
+		opacity: 1;
+	}
+}
+
+// Input
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  height: 28px;
+  padding: 0 5px !important;
+}
+
+// Features
+.rt-social-buttons {
+	margin: 10px;
+	padding: 15px;
+	.social-button {
+	    display: block;
+	    float: left;
+	    border-radius: 3px;
+	    font-size: 14px;
+	    height: 36px;
+	    line-height: 32px;
+	    margin-right: 3px;
+	    text-align: center;
+	    width: 36px;
+		span {
+			vertical-align: middle;
+			line-height: 25px;
+		}
+	}
+}
+#gantry-totop {
+	display: inline-block;
+	padding: 4px 10px;
+	.border-radius(3px);
+}
+#rt-accessibility {
+	.rt-desc {
+		float: left;
+		margin-right: 8px;
+		font-weight: bold;
+	}
+	#rt-buttons {
+		.button {
+			line-height: 1em;
+			padding: 0;
+			width: 14px;
+			height: 14px;
+			text-align: center;
+		}
+		.small {
+			font-size: inherit;
+		}
+		.small .button:after {
+			content: '-';
+		}
+		.large .button:after {
+			content: '+';
+		}
+	}
+}
+
+// Popup/Login Module Feature
+#rt-popup, #rt-popuplogin {
+	display: none;
+	.module-content {
+		margin: 0;
+		text-shadow: none;
+	}
+	.rt-block {
+		margin: 0;
+		padding: 0;
+	}
+	.title {
+		padding: 0;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+}
+#rt-popuplogin {
+	#form-login-remember {
+		clear: both;
+	}
+	#modlgn-passwd, #modlgn-username {
+		width: 165px;
+	}
+	input.button {
+		clear: both;
+		display: block;
+	}
+	p {
+		float: left;
+		margin-bottom: 10px;
+		&:first-child {
+			margin-right: 10px;
+		}
+	}
+	.readon {
+		float: right;
+	}
+	ul li {
+		float: none;
+		display: inline-block;
+		margin-right: 10px;
+	}
+}

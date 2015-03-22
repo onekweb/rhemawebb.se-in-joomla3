@@ -1,0 +1,126 @@
+/**
+ * @version   $Id: mosaic.css 11582 2013-06-20 13:09:51Z arifin $
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2014 RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+
+/* Mosaic - Core */
+.sprocket-mosaic {position: relative;-webkit-transform: translateZ(0);}
+.sprocket-mosaic:after {display: table;content: "";clear: both;}
+.sprocket-mosaic .sprocket-mosaic-header ul {list-style: none;margin: 0;padding: 0;}
+.sprocket-mosaic .sprocket-mosaic-container {position: relative;clear: both;}
+#main .sprocket-mosaic .sprocket-mosaic-container {margin: 0; padding: 0;}
+
+/* Mosaic - Overlay */
+.sprocket-mosaic-overlay {display: none;position: absolute;top:0;left:0;right:0;bottom:0;background-color:transparent;z-index:2;}
+.sprocket-mosaic-overlay .css-loader-wrapper {width: 60px;height:60px;margin: 25% auto 0;padding: 20px;background-color:#e5e5e5;background-color: rgba(0, 0, 0, 0.5);box-shadow:0 0 5px rgba(0, 0, 0, 0.4) inset,1px 1px 1px rgba(255, 255, 255, 0.1);border-radius:1em;}
+.sprocket-mosaic.refreshing .sprocket-mosaic-overlay {display: block;}
+
+/* Mosaic - Header */
+.sprocket-mosaic .sprocket-mosaic-header {margin-bottom: 10px;}
+.sprocket-mosaic .sprocket-mosaic-header li {display: inline-block;}
+.sprocket-mosaic-pagination-hidden {display: none;}
+
+/* Mosaic - Order */
+.sprocket-mosaic .sprocket-mosaic-header .sprocket-mosaic-order {float: right;}
+
+/* Mosaic - Filter */
+.sprocket-mosaic .sprocket-mosaic-header .sprocket-mosaic-filter {float: left;}
+
+/* Mosaic - Content */
+.sprocket-mosaic-container {margin: 0;padding: 0;list-style: none;}
+.sprocket-mosaic-container li {display: inline-block;-webkit-backface-visibility: hidden;}
+.sprocket-readmore {white-space: nowrap;-webkit-backface-visibility: hidden;}
+
+/* Mosaic - Tags */
+.sprocket-mosaic .sprocket-mosaic-tags, #main .sprocket-mosaic ul.sprocket-mosaic-tags {margin: 15px 0 0 0; border-radius: 3px;font-size: 90%;-webkit-backface-visibility: hidden;}
+.sprocket-mosaic .sprocket-mosaic-tags li, #main .sprocket-mosaic ul.sprocket-mosaic-tags li {width: auto;margin-right: 1px;padding: 2px 6px;border-radius: 3px;text-shadow: none;}
+
+/* Mosaic - Columns */
+.sprocket-mosaic-columns-1 li {width: 100%;}
+.sprocket-mosaic-columns-2 li {width: 50%;}
+.sprocket-mosaic-columns-3 li {width: 33.333333333333336%;}
+.sprocket-mosaic-columns-4 li {width: 25%;}
+.sprocket-mosaic-columns-5 li {width: 20%;}
+.sprocket-mosaic-columns-6 li {width: 16.666666666666668%;}
+
+/* Mosaic - Item */
+.sprocket-mosaic-item {display:block;}
+.sprocket-mosaic-item .sprocket-mosaic-image {width: 100%;}
+.sprocket-mosaic-item .title {margin-bottom: 10px;}
+
+/* Load More */
+.sprocket-mosaic-loadmore {-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;-ms-user-select:none;user-select:none;margin:50px auto 0 auto;display:block;padding:5px;width:155px;}
+.sprocket-mosaic-loadmore.hide { display:none; }
+.sprocket-mosaic-loadmore {cursor: pointer;}
+.sprocket-mosaic-loadmore span {font-size:12px;text-transform:capitalize;display:block;line-height:1.85em;text-align: center;}
+.sprocket-mosaic-loadmore .loadmore-info {font-size:10px;}
+.sprocket-mosaic-loadmore span strong {font-weight:normal;}
+.sprocket-mosaic-loadmore .loadmore-all {display: none;}
+.sprocket-mosaic-loadmore .loadmore-all span {line-height:42px;}
+.sprocket-mosaic-loadmore .loadmore-all .loadmore-info { display:none; }
+.sprocket-mosaic-loadmore.load-all .loadmore-all {display: block;}
+.sprocket-mosaic-loadmore.load-all .loadmore-more {display: none;}
+.sprocket-mosaic-loadmore.loader .loadmore-more, .sprocket-mosaic-loadmore.loader .loadmore-text { display:none; }
+.sprocket-mosaic-loadmore.loader span {display:block;margin:0 auto;}
+.sprocket-mosaic-loadmore .loadmore-info, .sprocket-mosaic-loadmore .loadmore-text,
+.sprocket-mosaic-loadmore .loadmore-info:hover, .sprocket-mosaic-loadmore .loadmore-text:hover {background-color: transparent !important;border: 0;margin: 0; padding: 0;}
+
+/* Spinner Images */
+.sprocket-mosaic-loadmore.loader span:before {font-family: FontAwesome;content: "\f013";font-size: 35px;display: block;margin: 10px auto;width: 30px;text-shadow: none;}
+.sprocket-mosaic-overlay .css-loader:before {color: #fff;font-family: FontAwesome;content: "\f110";font-size: 60px;display: block;margin: 20px auto;width: 55px;text-shadow: none;}
+.sprocket-mosaic-loadmore.loader span, .sprocket-mosaic-overlay .css-loader {-webkit-animation: rotate 1s linear infinite;-moz-animation: rotate 1s linear infinite;-ms-animation: rotate 1s linear infinite;-o-animation: rotate 1s linear infinite;animation: rotate 1s linear infinite;}
+
+/* Tweaks */
+.sprocket-mosaic-item {margin: 10px;} /* Margin defines the Gutter size. The actual gutter size is doubled. To have 10 for example, you need margin: 5px; */
+.sprocket-mosaic .sprocket-mosaic-container {margin: -10px;} /* Whatever is the gutter size, the container has to be negativiley applied in order too loose first and last columns margins */
+
+/* Spinner Rotator Keyframes */
+@-webkit-keyframes rotate {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes rotate {
+  from {-moz-transform: rotate(0deg);}
+  to {-moz-transform: rotate(360deg);}
+}
+@-ms-keyframes rotate {
+  from {-ms-transform: rotate(0deg);}
+  to {-ms-transform: rotate(360deg);}
+}
+@-o-keyframes rotate {
+  from {-o-transform: rotate(0deg);}
+  to {-o-transform: rotate(360deg);}
+}
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+/* Custom stuff */
+.sprocket-mosaic-item .sprocket-mosaic-title {margin: 0;font-size: 24px;}
+.sprocket-mosaic-item .sprocket-mosaic-title, .sprocket-mosaic-item .sprocket-mosaic-info {text-transform: none;}
+.sprocket-mosaic-item .sprocket-mosaic-title a {line-height: 1.2em;}
+.sprocket-mosaic-item .sprocket-mosaic-infos {font-size: 13px;margin: 0 0 15px 0;}
+.sprocket-mosaic-item .sprocket-mosaic-text {margin: 15px 0;display: block;}
+.sprocket-mosaic-item .sprocket-mosaic-text * {position: relative; z-index: 11;}
+.sprocket-mosaic-item .sprocket-mosaic-text [class^="box"], .sprocket-mosaic-item .sprocket-mosaic-text [class*=" box"] {z-index: 1;}
+.sprocket-mosaic-item {position: relative;}
+.sprocket-mosaic-item .sprocket-padding {padding: 10px;}
+#main .sprocket-mosaic .sprocket-mosaic-order ul li, #main .sprocket-mosaic .sprocket-mosaic-order ul li,
+.sprocket-mosaic .sprocket-mosaic-order li, .sprocket-mosaic .sprocket-mosaic-order li {border-radius: 4px;padding: 5px 15px;margin: 0 0 15px 0;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-o-user-select: none;-ms-user-select: none;user-select: none;}
+#main .sprocket-mosaic .sprocket-mosaic-filter ul li, #main .sprocket-mosaic .sprocket-mosaic-filter ul li,
+.sprocket-mosaic .sprocket-mosaic-filter li, .sprocket-mosaic .sprocket-mosaic-filter li {border-radius: 4px;padding: 5px 15px;margin: 0 0 15px 0;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-o-user-select: none;-ms-user-select: none;user-select: none;}
+.sprocket-mosaic-item .readon {margin-top: 15px;}
+.sprocket-mosaic-image-container {position: relative;overflow: hidden;cursor: pointer;margin: 15px -20px 0 -20px;}
+.sprocket-mosaic-image-container:hover .sprocket-mosaic-hover {margin-right: 0;}
+.sprocket-mosaic-hovercontent {position: absolute;bottom: 9px;right: 8px;opacity: 0;font-size: 25px;line-height: 1em;text-shadow: none;}
+.sprocket-mosaic-hovercontent span {display: block;font-size: 1em;margin-bottom: 6px;}
+.sprocket-mosaic-image-container:hover .sprocket-mosaic-hovercontent {opacity: 1;-webkit-transition: opacity 0.4s ease-in;-moz-transition: opacity 0.4s ease-in;-o-transition: opacity 0.4s ease-in;-ms-transition: opacity 0.4s ease-in;transition: opacity 0.4s ease-in;}
+.sprocket-mosaic-image-container:hover  .sprocket-mosaic-hover:before {border-bottom: 80px solid rgba(0, 0, 0, 0.7);border-left: 80px solid transparent;bottom: 0;content: "";height: 0;position: absolute;right: 0;width: 0;}
+.sprocket-mosaic-item .sprocket-mosaic-head {margin: 0;padding: 0;}
+.sprocket-mosaic-item .sprocket-mosaic-content {margin-bottom: 25px;}
+
+/* Default Styling */
+.sprocket-mosaic-item {padding: 10px;-webkit-backface-visibility: hidden;border-radius: 5px;}

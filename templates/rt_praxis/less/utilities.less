@@ -1,0 +1,278 @@
+/**
+* @version   $Id: utilities.less 12179 2013-07-22 08:26:11Z arifin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2014 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+// Basic Reseting Classes
+body {
+
+	.noitalic {font-style: normal !important;}
+
+	.nobold {font-weight: normal !important;}
+
+	.flush {margin: 0 !important; padding: 0 !important;}
+
+	.nomarginall {margin: 0 !important;}
+
+	.nopaddingall {padding: 0 !important;}
+
+	.nomargintop {margin-top: 0 !important;}
+
+	.nomarginbottom {margin-bottom: 0 !important;}
+
+	.nomarginleft {margin-left: 0 !important;}
+
+	.nomarginright {margin-right: 0 !important;}
+
+	.nopaddingtop {padding-top: 0 !important;}
+
+	.nopaddingbottom {padding-bottom: 0 !important;}
+
+	.nopaddingleft {padding-left: 0 !important;}
+
+	.nopaddingright {padding-right: 0 !important;}
+
+}
+
+// RokAjaxSearch
+#rokajaxsearch {
+	margin: 0;
+}
+#rokajaxsearch > .rokajaxsearch {
+	background: none;
+	box-shadow: none;
+	border: none;
+}
+.rokajaxsearch {
+	.roksearch-wrapper {
+		.border-radius(5px);
+	}
+	.inputbox {
+		border: 0;
+		.border-radius(5px);
+		background-position: 97% -65px;
+		background-repeat: no-repeat;
+		font-size: @base-font-size;
+		margin-bottom: 0;
+		padding: 0 10px;
+		width: 100%;
+		height: 34px;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;			
+	}
+	.search_options {
+		margin-top: 8px;
+		padding-bottom: 15px;
+		label {
+			margin-right: 10px !important;
+			input[type="radio"], input[type="checkbox"] {
+				margin: 0 5px 0 0;
+			}
+		}
+	}
+	.clr {
+		clear: both;
+	}
+	.searchintro {
+		overflow: hidden;
+	}
+}
+#roksearch_results {
+	z-index: 10000;
+	position: absolute;
+	width: 400px;
+	float: right;
+	text-align: left;
+	visibility: hidden;
+	border-radius: 2px;
+	margin-top: 5px;
+	.small {
+		display: inline;
+		position: relative;
+		text-align: inherit;
+		bottom: 0;
+		right: 0;
+		font-size: 11px;
+		font-style: italic;
+	}
+	a.clr {
+		margin: 10px 0 5px 0;
+	}
+	h3 {
+		margin-top: 0;
+		margin-bottom: 2px;
+		line-height: 110%;
+		font-size: 110%;
+		padding-bottom: 0;
+	}
+	.container-wrapper {
+		overflow: hidden;
+	}
+	.page {
+		float: left;
+	}
+	.roksearch_header, .roksearch_row_btm {
+		padding: 10px 15px;
+		line-height: 130%;
+		text-transform: none;
+		font-weight: normal;
+		font-size: 14px;
+	}
+	.roksearch_header {
+		border-radius: 3px 3px 0 0;
+	}
+	.roksearch_row_btm {
+		border-radius: 0 0 3px 3px;
+	}
+	.roksearch_row_btm {
+		border-bottom: none;
+		overflow: hidden;
+		span {
+			line-height: 140%;
+		}
+	}
+	.roksearch_even, .roksearch_odd {
+		padding: 15px;
+		border-bottom: none;
+		span {
+			margin-top: 15px;
+			line-height: 140%;
+			&.highlight {
+				margin-top: 0;
+				padding: 0 3px;
+			}
+		}
+	}
+	.viewall {
+		float: left;
+		margin: 0 5px;
+		span {
+			line-height: 130%;
+			text-transform: none;
+		}
+	}
+	.estimated_res {
+		font-size: 9px;
+		font-style: italic;
+		text-transform: none;
+		float:left;
+	}
+	.pagination_res {
+		font-style: normal;
+		float: right;
+		text-transform: none;
+		font-size: 11px;
+		margin-top: -1px;
+	}
+	.powered-by-google {
+		text-transform: lowercase;
+		font-style: italic;
+		font-size: 9px;
+	}
+	.google-search {
+		#roksearch_link {
+			margin-top: 5px;
+		}
+	}
+	.google-thumb-image {
+		margin: 0 auto;
+	}
+	.readon {
+		margin-top: 15px;
+		span, .button {
+			font-size: 13px;
+			line-height: 22px;
+		}
+	}
+	.container-arrows {
+		margin-top: 2px;
+		height: 12px;
+		width: 30px;
+		float: left;
+		margin-right: 5px;
+		position: relative;
+	}
+	.roksearch_wrapper2, .roksearch_wrapper3, .roksearch_wrapper4 {
+		border-radius: 2px;
+	}
+	.roksearch_result_wrapper1 {
+		.transition(background-color 0.3s linear);
+	}
+	#roksearch_link {
+		float: right;
+		padding-right: 5;
+		margin-top: 15px;
+		display: block;
+		height: 16px;
+		width: 16px;
+	}
+	.arrow-left, .arrow-left-disabled, .arrow-right, .arrow-right-disabled {
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 0;
+	}
+	.arrow-left {
+		left: 0;
+		cursor: pointer;
+		background-position: 0 2px;
+	}
+	.arrow-left-disabled {
+		left: 0;
+		background-position: 0 -33px;
+	}
+	.arrow-right {
+		left: 18px;
+		cursor: pointer;
+		background-position: 0 -15px;
+	}
+	.arrow-right-disabled {
+		left: 18px;
+		background-position: 0 -33px;
+	}
+}
+
+// RokGallery
+.rg-sc { 
+	.rg-scr-slide {
+		display: block;
+	}
+	.rg-scr-info {
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+	.layout-left .rg-scr-info {
+		left: 0;
+	}
+	.layout-right .rg-scr-info {
+		right: 0;
+	}		
+	.rg-scr-content {
+		position: absolute;
+		top: 0;
+	}
+	.rg-scr-title-span {
+		margin: 0 0 15px 0;
+	}
+	.rg-scr-desc-surround {
+		clear: both;
+	}
+	.rg-scr-controls .prev {
+		left: -40px;
+	}
+	.rg-scr-controls .next {
+		right: -40px;
+	}	
+}
+.rg-sc-slide {
+	.rg-sc-title-span {
+		margin: 0 0 15px 0;
+	}
+	.rg-sc-desc-surround {
+		clear: both;
+	}	
+}

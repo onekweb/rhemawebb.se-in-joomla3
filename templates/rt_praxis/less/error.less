@@ -1,0 +1,93 @@
+/**
+* @version   $Id: error.less 10172 2013-05-10 16:09:54Z kevin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2014 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+.rt-error {
+	#rt-mainbody-surround {
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+	.rt-error-desc {
+		margin: 60px 0;
+	}
+	#rt-bottom {
+		min-height: 120px;
+	}	
+	#gantry-totop {
+		display: none;
+	}
+}
+
+.rt-error-img {
+	width: 400px;
+	height: 328px;
+	float: left;
+	background: url(../images/main/error-image.png) 0 0 no-repeat;
+	background-size: 400px;
+}
+
+.rt-error-content {
+	margin-left: 450px;
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+	.rt-error-img {
+		width: 320px;
+		height: 260px;
+		background-size: 320px;
+	}
+	.rt-error-content {
+		margin-left: 335px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.rt-error-img {
+		width: 280px;
+		height: 250px;
+		background-size: 280px;
+	}
+	.rt-error-content {
+		margin-left: 295px;
+	}
+	.error-title {
+		font-size: 1.8em;
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+	.rt-error-img {
+		width: 280px;
+		height: 260px;
+		margin: 0 auto;
+		background-size: 280px;
+		background-position: 50% 0;
+		float: none;
+	}
+	.rt-error-content {
+		margin-left: 0;
+	}
+	.error-title {
+		font-size: 1.8em;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.rt-error-img {
+		width: 260px;
+		height: 240px;
+		margin: 0 auto;
+		background-size: 260px;
+		background-position: 50% 0;
+		float: none;
+	}
+	.rt-error-content {
+		margin-left: 0;
+	}
+	.error-title {
+		font-size: 1.6em;
+	}
+}

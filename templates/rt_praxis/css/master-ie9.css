@@ -1,0 +1,25 @@
+/**
+* @version   $Id: master-ie9.css 12310 2013-07-30 15:31:31Z arifin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+ul.menu li.active.current > a:before, ul.menu li.active.current > .item:before, ul.menu li.active.current > .separator:before,
+ul.menu #current.active > a:before, ul.menu #current.active > .item:before, ul.menu #current.active > .separator:before {font-size: 15px;}
+
+/* Suffixes */
+body .title4 .module-title {border-bottom: 1px solid rgba(0, 0, 0, 0.1);}
+body .title4 .module-title:before, body .title4 .module-title:after {filter: none !important; background: none !important;}
+body [class*="box"] [class*="box"] {filter: none !important;}
+body [class^="box"] .module-content [class*="custom"], body [class*=" box"] .module-content [class*="custom"] {filter: none;}
+body .box6 {background: rgba(0, 0, 0, 0.2) !important;}
+body .box6, body .rt-gradient {filter: none !important;}
+
+/* Pagination */
+body .pagination ul li a {filter: none;}
+
+/* Gradient + Border Radius Fix */
+body .button, body .readon, body button.validate, body p.readmore a, body #member-profile a, body #member-registration a, body .formelm-buttons button, body .controls .btn, body .logout-button .btn, body #gantry-totop, body .sprocket-mosaic-header li, body .sprocket-readmore, body .sprocket-mosaic-loadmore, body .sprocket-lists-title .indicator, body .roksearch_results a.clr, body #k2Container .k2ReadMore, body #k2Container #submitCommentButton {filter: none !important;}
+body #rt-header .horizontal-login #modlgn-passwd, body #rt-header .horizontal-login #modlgn-username, body .rokajaxsearch .roksearch-wrapper {filter: none !important;}
+body .sprocket-features-pagination li, body .sprocket-lists-pagination li, body .sprocket-strips-pagination li {filter: none !important;}

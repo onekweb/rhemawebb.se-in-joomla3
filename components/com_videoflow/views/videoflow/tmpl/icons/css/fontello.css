@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?33707466');
+  src: url('../font/fontello.eot?33707466#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?33707466') format('woff'),
+       url('../font/fontello.ttf?33707466') format('truetype'),
+       url('../font/fontello.svg?33707466#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+ [class^="vf-icon-"]:before, [class*=" vf-icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  font-variant: normal;
+  text-transform: none;   
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  font-size: 400%;
+ 
+  /* Uncomment for 3D effect */
+  text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); 
+}
+.vf-icon-play:before { content: '\e800'; } /* '' */
+.vf-icon-expand-right:before { content: '\e801'; } /* '' */
+.vf-icon-collapse-left:before { content: '\e802'; } /* '' */
+.vf-icon-collapse:before { content: '\e803'; } /* '' */
+.vf-icon-expand:before { content: '\e804'; } /* '' */
+.vf-icon-play-circled:before { content: '\e805'; } /* '' */
+.vf-icon-play-circled2:before { content: '\e806'; } /* '' */
+.vf-icon-stop:before { content: '\e807'; } /* '' */
+.vf-icon-pause:before { content: '\e808'; } /* '' */
+.vf-icon-to-end:before { content: '\e809'; } /* '' */
+.vf-icon-to-end-alt:before { content: '\e80a'; } /* '' */
+.vf-icon-to-start:before { content: '\e80b'; } /* '' */
+.vf-icon-to-start-alt:before { content: '\e80c'; } /* '' */
+.vf-icon-fast-fw:before { content: '\e80d'; } /* '' */
+.vf-icon-fast-bw:before { content: '\e80e'; } /* '' */
+.vf-icon-eject:before { content: '\e80f'; } /* '' */

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Category View Layout">
+		<message>
+			<![CDATA[Displays a list of categories.]]>
+		</message>
+	</layout>
+	<state>
+		<name>Category View Layout</name>
+		<description>Displays a paginated list of categories.</description>
+	</state>
+</metadata>

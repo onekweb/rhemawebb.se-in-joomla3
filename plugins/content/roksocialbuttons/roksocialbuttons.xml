@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<extension group="content" method="upgrade" type="plugin" version="2.5">
+	<name>Content - RokSocialButtons</name>
+    <creationDate>November 5, 2013</creationDate>
+    <author>RocketTheme, LLC</author>
+    <authorEmail>support@rockettheme.com</authorEmail>
+    <authorUrl>http://www.rockettheme.com</authorUrl>
+    <copyright>(C) 2005 - 2013 RocketTheme, LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>1.5.2</version>
+	<description>RokSocialButtons Content Plugin.  Use format {socialbuttons} in your article to display the social buttons in your article</description>
+    <updateservers>
+   		<server name="RocketTheme Update Directory" priority="1" type="collection">http://updates.rockettheme.com/joomla/updates.xml</server>
+   	</updateservers>
+	<files>
+		<folder>assets</folder>
+        <filename plugin="roksocialbuttons">roksocialbuttons.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field default="" description="Insert your AddThis ID to enable tracking and analytics.  Sign-up for a free account at http://www.addthis.com" label="AddThis ID" name="addthis_id" type="text"/>
+                <field default="1" description="Enable or Disable the Twitter button" label="Twitter" name="enable_twitter" type="list">
+                    <option value="1">Enabled</option>
+                    <option value="0">Disabled</option>
+                </field>
+                <field default="1" description="Enable or Disable the Facebook button" label="Facebook" name="enable_facebook" type="list">
+                    <option value="1">Enabled</option>
+                    <option value="0">Disabled</option>
+                </field>
+                <field default="1" description="Enable or Disable the Google button" label="Google" name="enable_google" type="list">
+                    <option value="1">Enabled</option>
+                    <option value="0">Disabled</option>
+                </field>
+                <field default="" description="Text you can put in front of the share buttons" label="Prepend Text" name="prepend_text" type="text"/>
+                <field default="" description="A space separated list of CSS classnames to add to the div that surrounds the buttons" label="Extra CSS Class" name="extra_class" type="text"/>
+                <field default="0" description="Display Social Buttons after article title or after article content" label="Display Position" name="display_position" type="list">
+                    <option value="0">Before Article Content</option>
+                    <option value="1">After Article Content</option>
+                </field>
+                <field default="2" description="Use tag replace method {socialbuttons}, only add to selected categories, or both" label="Add Method" name="add_method" type="list">
+                    <option value="0">Only add to Selected Categories</option>
+                    <option value="1">Replace Method {socialbuttons}</option>
+                    <option value="2">Both Replace and Selected Categories</option>
+                </field>
+                <field class="joomla content_type" default="" description="Select Articles from one or more Categories. If no selection will show all categories as default" extension="com_content" label="JCATEGORY" multiple="true" name="catid" size="10" type="category">
+                    <option value="">JOPTION_ALL_CATEGORIES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

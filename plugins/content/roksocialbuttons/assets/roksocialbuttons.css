@@ -1,0 +1,13 @@
+.roksocialbuttons .custom_images span,
+.roksocialbuttons .custom_images a:hover > span {
+	display: inline-block;
+	width:24px;
+	height:24px;
+	background-color: transparent !important;
+	background-image: url(icons.png) !important;
+	margin-right:5px;
+}
+.roksocialbuttons .addthis_button_twitter span {background-position: 0 0 !important;}
+.roksocialbuttons .addthis_button_facebook span {background-position: 0 -24px !important;}
+.roksocialbuttons .addthis_button_google span {background-position: 0 -48px !important;}
+body .roksocialbuttons .custom_images > a:hover {background:none !important;color:inherit;}

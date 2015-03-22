@@ -1,0 +1,62 @@
+/**
+ * @version   $Id: lists.css 12330 2013-07-31 11:35:46Z arifin $
+ * @author    RocketTheme http://www.rockettheme.com
+ * @copyright Copyright (C) 2007 - 2014 RocketTheme, LLC
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
+
+/* Layout - Sprocket Lists - Core */
+.sprocket-lists {position: relative;-webkit-transform: translateZ(0);}
+.sprocket-lists:after {display: table;content: "";*zoom: 1;clear: both;}
+.sprocket-lists ul {list-style: none !important;}
+[class^="title"] .sprocket-lists-container,[class*=" title"] .sprocket-lists-container{margin-top:-19px;}
+.sprocket-lists ul.sprocket-lists-container li {padding: 5px 0;margin-bottom: 2px;}
+.sprocket-lists ul.sprocket-lists-container li {position:relative;display: block;width: 100%;}
+.sprocket-lists ul.sprocket-lists-container li:before, .sprocket-lists-container li:after {content:"";position:absolute;left:-3px;}
+.sprocket-lists ul.sprocket-lists-container li:before {right:-15px;bottom:-1px;height:1px;}
+.sprocket-lists ul.sprocket-lists-container li:after {right:-15px;bottom:-2px;height:1px;}
+.sprocket-lists-container {overflow: hidden;margin: 0 -15px;padding: 0;}
+
+/* Layout - Sprocket Lists - Titles */
+.sprocket-lists-title {position: relative;padding: 10px 0;font-size: 18px;margin: 0;cursor: pointer;display: block;}
+.sprocket-lists-title.padding {padding-left: 50px;}
+.sprocket-lists-title .indicator {position: absolute;top: 5px;left: 15px;display: block;width: 25px;height: 25px;border-radius: 3px;cursor: pointer;text-align: center;padding: 0 !important;}
+.sprocket-lists-title .indicator span {display: none;}
+.sprocket-lists-title .indicator:hover {opacity: 1;}
+.active .indicator {opacity: 1;}
+.sprocket-lists li.active .sprocket-lists-title .indicator:before {color: #ffffff;text-shadow: none;content: "×";font-size: 17px;padding-top: 4px;padding-left: 2px;display: block;}
+.sprocket-lists .sprocket-lists-title .indicator:before {color: #ffffff;text-shadow: none;content: "+";font-size: 17px;padding-top: 4px;padding-left: 2px;display: block;}
+
+/* Layout - Sprocket Lists - Items */
+.sprocket-lists-item {display: block;position: relative;}
+.active .sprocket-lists-item {opacity: 1;margin-bottom: 0;}
+.sprocket-lists-item .sprocket-padding {padding: 0 15px;display: block;}
+.sprocket-lists-image {float: left;margin: 10px 15px 10px 0;}
+.sprocket-lists-item .readon-wrapper {display: block;}
+.sprocket-lists-item .readon {clear: both;margin: 15px 0 10px 0;}
+
+/* Layout - Sprocket Lists - Navigation */
+.sprocket-lists-nav {display: table;width: 100%;padding: 20px 10px 5px 20px;margin: 0 -15px 0 -25px;}
+.sprocket-lists-pagination {display: block;position: relative;left: 50%;margin-left: 50px;}
+.sprocket-lists-pagination ul {float: left;margin: 0 !important;padding: 0 !important;}
+.sprocket-lists-pagination li {display: inline-block;padding: 5px !important;opacity: 0.8;border-radius: 1em;cursor: pointer;}
+.sprocket-lists-pagination li.active {opacity: 1;}
+.sprocket-lists-pagination li span {display: none;font-size: 0.85em;line-height: 1em;}
+.sprocket-lists-pagination-hidden {display: none;}
+.sprocket-lists-arrows {display: table-cell;vertical-align: middle;}
+.sprocket-lists-arrow ul {float: right;margin: 0 !important;padding: 0 !important;}
+.sprocket-lists-arrows .arrow {position: relative;display: block;width: 25px;height:25px;border-radius: 3px;opacity: 1;cursor: pointer;float: right;margin: -5px 5px 0 0;text-align: center;text-shadow: none;-webkit-transform: translateZ(0);-webkit-backface-visibility: hidden;}
+.sprocket-lists-arrows .arrow:hover {opacity: 1;}
+.sprocket-lists-arrows .arrow.prev:before {content: '\f104';font-family: FontAwesome;position: absolute;top: 0px;left: 10px;}
+.sprocket-lists-arrows .arrow.next:before {content: '\f105';font-family: FontAwesome;position: absolute;top: 0px;left: 10px;}
+
+/* Layout - Sprocket Lists - Colors */
+.sprocket-lists-pagination li {background: #000;color: #fff;}
+.sprocket-lists-arrows .arrow {background: #000;color: #fff;}
+.sprocket-lists-arrows .arrow span {display: none;}
+
+/* Layout - Sprocket Lists - Transitions */
+.sprocket-lists-arrows .arrow, .sprocket-lists-title .indicator {-webkit-transition: opacity 0.2s ease-in;-moz-transition: opacity 0.2s ease-in;-o-transition: opacity 0.2s ease-in;transition: opacity 0.2s ease-in;}
+
+/* Spinner */
+.sprocket-lists.loading .spinner:before {font-family: FontAwesome;content: "\f110";font-size: 18px;position: absolute;display: block;margin: 0 0 0 10px;width: 16px;text-shadow: none;-webkit-animation: rotate 0.8s linear infinite;-moz-animation: rotate 0.8s linear infinite;-ms-animation: rotate 0.8s linear infinite;-o-animation: rotate 0.8s linear infinite;animation: rotate 0.8s linear infinite;}

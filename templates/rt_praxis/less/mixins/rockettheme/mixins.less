@@ -1,0 +1,110 @@
+/**
+* @version   $Id: mixins.less 10172 2013-05-10 16:09:54Z kevin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2014 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+@import "utilities.less";
+@import "dropdowns.less";
+@import "popover.less";
+@import "buttons.less";
+
+/* Ellipsis */
+.ellipsis() {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	-moz-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+}
+
+/* Gradient */
+#rt-gradient {
+	.horizontal-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+		background-color: mix(@midColor, @endColor, 80%);
+		background-image: -webkit-gradient(linear, left top, right top, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+		background-image: -webkit-linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
+		background-image: -moz-linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
+		background-image: -ms-linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
+		background-image: -o-linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
+		background-image: linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
+		background-repeat: no-repeat;
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); // IE9 and down, gets no color-stop at all for proper fallback
+	}
+}
+
+/* CSS Arrows */
+#CSSArrow {
+  .top(@arrowWidth: 5px, @arrowColor: @black, @arrowOffset: 0, @arrowPosition: 50%) {
+	bottom: @arrowOffset;
+	left: @arrowPosition;
+	margin-left: -@arrowWidth;
+	border-left: @arrowWidth solid transparent;
+	border-right: @arrowWidth solid transparent;
+	border-top: @arrowWidth solid @arrowColor;
+  }
+  .left(@arrowWidth: 5px, @arrowColor: @black, @arrowOffset: 0, @arrowPosition: 50%) {
+	top: @arrowPosition;
+	right: @arrowOffset;
+	margin-top: -@arrowWidth;
+	border-top: @arrowWidth solid transparent;
+	border-bottom: @arrowWidth solid transparent;
+	border-left: @arrowWidth solid @arrowColor;
+  }
+  .bottom(@arrowWidth: 5px, @arrowColor: @black, @arrowOffset: 0, @arrowPosition: 50%) {
+	top: -@arrowOffset;
+	left: @arrowPosition;
+	margin-left: -@arrowWidth - 1;
+	border-left: @arrowWidth solid transparent;
+	border-right: @arrowWidth solid transparent;
+	border-bottom: @arrowWidth solid @arrowColor;
+  }
+  .right(@arrowWidth: 5px, @arrowColor: @black, @arrowOffset: 0, @arrowPosition: 50%) {
+	top: @arrowPosition;
+	left: @arrowOffset;
+	margin-top: -@arrowWidth;
+	border-top: @arrowWidth solid transparent;
+	border-bottom: @arrowWidth solid transparent;
+	border-right: @arrowWidth solid @arrowColor;
+  }
+}
+
+// System Messages
+.sys-msg () {
+	color: #0055BB;
+	background: #BFD3E6;
+	#gradient > .vertical-three-colors(lighten(#BFD3E6, 3%), #BFD3E6, 50%, darken(#BFD3E6, 5%));
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+	border-top: 1px solid lighten(#BFD3E6, 25%);
+	.box-shadow(0 1px 0 rgba(0, 0, 0, 0.3));
+}
+
+.sys-msg (error) {
+	color: #cc0000;
+	background: #EBC8C9;
+	#gradient > .vertical-three-colors(lighten(#EBC8C9, 3%), #EBC8C9, 50%, darken(#EBC8C9, 5%));
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+	border-top: 1px solid lighten(#EBC8C9, 25%);
+	.box-shadow(0 1px 0 rgba(0, 0, 0, 0.3));
+}
+
+.sys-msg (notice) {
+	color: #A08B4C;
+	background: #F5ECC1;
+	#gradient > .vertical-three-colors(lighten(#F5ECC1, 3%), #F5ECC1, 50%, darken(#F5ECC1, 5%));
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+	border-top: 1px solid lighten(#F5ECC1, 25%);
+	.box-shadow(0 1px 0 rgba(0, 0, 0, 0.3));
+}
+
+.sys-msg (success) {
+	color: #468847;
+	background: #dff0d8;
+	#gradient > .vertical-three-colors(lighten(#dff0d8, 3%), #dff0d8, 50%, darken(#dff0d8, 5%));
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+	border-top: 1px solid lighten(#dff0d8, 25%);
+	.box-shadow(0 1px 0 rgba(0, 0, 0, 0.3));
+}

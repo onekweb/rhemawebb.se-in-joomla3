@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <view title="Category List">
+                <message><![CDATA[Displays a pagenated list of categories.]]></message>
+        </view>
+</metadata>

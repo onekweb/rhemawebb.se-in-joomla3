@@ -1,0 +1,787 @@
+/**
+* @version   $Id: demo-styles.less 12302 2013-07-30 14:29:30Z arifin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2014 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+// Sidenav Spacing
+.menu-home.sidemodule-position-inside-left {
+	.fp-sidenav-spacing,
+	&.menu-home #rt-footer-surround .rt-container .rt-alpha .rt-block {
+		padding-left: 180px;
+	    padding-right: 0;
+	}	
+}
+.menu-home.sidemodule-position-inside-right {
+	.fp-sidenav-spacing,
+	&.menu-home #rt-footer-surround .rt-container .rt-alpha .rt-block {
+		padding-left: 0;
+	    padding-right: 180px;
+	}	
+}
+
+// Side Module Menu
+#rt-sidemod {
+    ul.menu {
+    	display: inline-block;
+    	list-style: none;
+    	li {
+			background: darken(@main-background, 25%);
+    		display: table;
+    		border-radius: 5px;		
+    		position: relative;
+    		z-index: 100;	
+			.box-shadow(~"0 0 2px 2px rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(225, 225, 225, 0.15) inset");
+			a {
+				color: @white;
+    			font-weight: normal;
+    			padding: 12px 14px;	
+    			&:before {
+    				display: none;
+    				margin: 0;
+    				padding: 0;
+    			}    						
+			}			
+			&.active, &:hover {
+				background: @main-accent;
+				.box-shadow(-3px 3px 0 darken(@main-accent, 15%));
+				position: relative;
+				top: -3px;
+				left: 3px;
+				.transition(all 0.1s ease-out);
+			}
+    	}
+    }  
+    &.rt-inside-right, &.rt-outside-right {
+	    ul.menu li {
+	    	float: right;
+	    }	
+    }	
+}
+
+// Demo Image
+.rt-image {
+	position: relative;
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+.rt-img-rounded {
+    box-shadow: 0 0 0 8px #FFFFFF;
+    border-radius: 100%;
+    margin-top: 15px;
+    width: 70%;
+}
+.rt-utility-img {
+	opacity: 0.5;
+	.transition(opacity 0.2s);
+	&:hover {
+		opacity: 1;
+	}
+}
+
+// RokSocial Buttons
+#rt-navigation .rt-social-buttons {
+	float: right;
+    margin: 0;
+    padding: 10px 0;
+}
+.rt-social-buttons {
+	.social-button {
+		color: fadeout(@white, 60%);
+		background: rgba(0, 0, 0, 0.1);
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+		.box-shadow(~"0 0 2px 2px rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(225, 225, 225, 0.15) inset");
+		&:hover {
+			color: @white;
+		}
+		&.rt-social-button-1:hover {
+			background: #3B5998;
+		}	
+		&.rt-social-button-2:hover {
+			background: #00CAFB;
+		}
+		&.rt-social-button-3:hover {
+			background: #FF6600;
+		}
+		&.rt-social-button-4:hover {
+			background: #D23A1D;
+		}	
+		&.rt-social-button-5:hover {
+			background: @main-accent;
+		}
+		&.rt-social-button-6:hover {
+			background: @main-accent;
+		}				
+	}
+}
+
+// RokAjaxSearch
+.fp-rokajaxsearch {
+	&.rt-block {
+	    margin: 0;
+	    padding: 10px 18px 0 10px;		
+	}
+}
+
+// RokSprocket Headlines
+.fp-roksprocket-headlines {
+	font-family: @praxis-font-light;
+	font-weight: normal;	
+	font-size: 2.5em;
+	line-height: 1.3em;	
+	.sprocket-headlines {
+		margin: 0 45px 0 0;
+		.sprocket-headlines-list {
+			padding: 10px 60px 10px 10px !important;
+		}
+		.sprocket-headlines-navigation .arrow {
+			margin-top: 0;
+			&.prev {
+			    left: inherit;
+			    right: 0;			
+			}
+		}		
+	}
+}
+
+// RokSprocket Strips
+.fp-roksprocket-strips {
+	&.rt-block {
+		margin: 0 10px;
+		padding: 0 10px;
+	}
+
+	.sprocket-strips-container {
+		overflow: visible;
+		li {
+			margin: 0;
+			.sprocket-strips-item {
+				background: none;
+				border-radius: 0;
+				.box-shadow(none);
+				.sprocket-strips-content {
+					padding: 0;
+					.readon {
+						display: none;
+					}
+				}
+			}		
+		}		
+	}
+
+	.cols-1 > li {width: 100%;}
+	.cols-2 > li {width: 50%;}
+	.cols-3 > li {width: 33.3333%;}
+	.cols-4 > li {width: 25%;}
+	.cols-5 > li {width: 20%;}
+	.cols-6 > li {width: 16.6667%;}
+	.cols-7 > li {width: 14.2857%;}
+	.cols-8 > li {width: 12.5%;}
+	.cols-9 > li {width: 11.1111%;}
+	.cols-10 > li {width: 10%;}
+	.cols-11 > li {width: 9.0909%;}
+	.cols-12 > li {width: 8.3333%;}	
+
+	.sprocket-strips-image {
+		display: block;
+		position: relative;	
+		z-index: 90;		
+		height: 100%;
+		img {
+			.transition(all 0.2s);
+		}
+		&:before {
+		    background: fadeout(darken(@showcase-background, 20%), 40%);
+		    content: "";
+		    position: absolute;
+		    display: block;
+		    height: 100%;
+		    width: 100%;
+		}		
+		&:hover {
+			z-index: 100;
+			img {	
+				-webkit-transform: translate(15px, -15px);
+				-moz-transform: translate(15px, -15px);
+				-ms-transform: translate(15px, -15px);
+				transform: translate(15px, -15px);	
+				box-shadow:   -1px 0px 0 darken(@showcase-background, 5%), 
+				               0px 1px 0 darken(@showcase-background, 20%), 
+				              -2px 1px 0 darken(@showcase-background, 5%), 
+				              -1px 2px 0 darken(@showcase-background, 20%), 
+				              -3px 2px 0 darken(@showcase-background, 5%), 
+				              -2px 3px 0 darken(@showcase-background, 20%), 
+				              -4px 3px 0 darken(@showcase-background, 5%), 
+				              -3px 4px 0 darken(@showcase-background, 20%), 
+				              -5px 4px 0 darken(@showcase-background, 5%), 
+				              -4px 5px 0 darken(@showcase-background, 20%), 
+				              -6px 5px 0 darken(@showcase-background, 5%),
+				              -5px 6px 0 darken(@showcase-background, 20%), 
+				              -7px 6px 0 darken(@showcase-background, 5%),
+				              -6px 7px 0 darken(@showcase-background, 20%), 
+				              -8px 7px 0 darken(@showcase-background, 5%),
+				              -7px 8px 0 darken(@showcase-background, 20%), 
+				              -9px 8px 0 darken(@showcase-background, 5%),
+				              -8px 9px 0 darken(@showcase-background, 20%), 
+				              -10px 9px 0 darken(@showcase-background, 5%),
+				              -9px 10px 0 darken(@showcase-background, 20%), 
+				              -11px 10px 0 darken(@showcase-background, 5%),
+				              -10px 11px 0 darken(@showcase-background, 20%), 
+				              -12px 11px 0 darken(@showcase-background, 5%),
+				              -11px 12px 0 darken(@showcase-background, 20%), 
+				              -13px 12px 0 darken(@showcase-background, 5%),
+				              -12px 13px 0 darken(@showcase-background, 20%), 
+				              -14px 13px 0 darken(@showcase-background, 5%),
+				              -13px 14px 0 darken(@showcase-background, 20%), 
+				              -15px 14px 0 darken(@showcase-background, 5%),	
+				              -14px 15px 0 darken(@showcase-background, 20%), 
+				              -16px 15px 0 darken(@showcase-background, 5%);
+			}
+			.strips-image-shadow {
+				width: 100%;
+			    height: 100%;
+			    opacity: 0.5;
+			    position: absolute;
+				-webkit-transform: translate(15px, -15px);
+				-moz-transform: translate(15px, -15px);
+				-ms-transform: translate(15px, -15px);
+				transform: translate(15px, -15px);				    
+				box-shadow:   -15px 16px 0 darken(@main-background, 10%),
+				              -17px 16px 0 darken(@main-background, 5%),
+				              -16px 17px 0 darken(@main-background, 10%),
+				              -18px 17px 0 darken(@main-background, 5%),
+				              -17px 18px 0 darken(@main-background, 10%),
+				              -19px 18px 0 darken(@main-background, 5%),
+				              -18px 19px 0 darken(@main-background, 10%),
+				              -20px 19px 0 darken(@main-background, 5%),
+				              -19px 20px 0 darken(@main-background, 10%),
+				              -21px 20px 0 darken(@main-background, 5%),
+				              -20px 21px 0 darken(@main-background, 10%),
+				              -22px 21px 0 darken(@main-background, 5%),
+				              -21px 22px 0 darken(@main-background, 10%),
+				              -23px 22px 0 darken(@main-background, 5%),
+				              -22px 23px 0 darken(@main-background, 10%),
+				              -24px 23px 0 darken(@main-background, 5%),
+				              -23px 24px 0 darken(@main-background, 10%),
+				              -25px 24px 0 darken(@main-background, 5%),
+				              -24px 25px 0 darken(@main-background, 10%),
+				              -26px 25px 0 darken(@main-background, 5%),
+				              -25px 26px 0 darken(@main-background, 10%),
+				              -27px 26px 0 darken(@main-background, 5%),
+				              -26px 27px 0 darken(@main-background, 10%),
+				              -28px 27px 0 darken(@main-background, 5%),
+				              -27px 28px 0 darken(@main-background, 10%),
+				              -29px 28px 0 darken(@main-background, 5%),
+				              -28px 29px 0 darken(@main-background, 10%),
+				              -30px 29px 0 darken(@main-background, 5%),
+				              -29px 30px 0 darken(@main-background, 10%),
+				              -31px 30px 0 darken(@main-background, 5%);
+			}
+		}
+	}
+}
+
+// RokSprocket Tabs
+.fp-roksprocket-tabs {
+	.sprocket-tabs {
+		margin: -15px;
+		padding: 15px;
+	}
+	.sprocket-tabs-nav {
+		margin-left: 0;
+	}
+	.sprocket-tabs-panels {
+		padding-left: 0;
+	}
+	.sprocket-tabs-image {
+	    img {
+	    	.transition(all 0.2s);
+	    }
+		&:hover {
+			img {
+				z-index: 100;
+				position: relative;			
+				-webkit-transform: translate(15px, -15px);
+				-moz-transform: translate(15px, -15px);
+				-ms-transform: translate(15px, -15px);
+				transform: translate(15px, -15px);
+				box-shadow:   -1px 0px 0 darken(@main-background, 10%), 
+				               0px 1px 0 darken(@main-background, 20%), 
+				              -2px 1px 0 darken(@main-background, 10%), 
+				              -1px 2px 0 darken(@main-background, 20%), 
+				              -3px 2px 0 darken(@main-background, 10%), 
+				              -2px 3px 0 darken(@main-background, 20%), 
+				              -4px 3px 0 darken(@main-background, 10%), 
+				              -3px 4px 0 darken(@main-background, 20%), 
+				              -5px 4px 0 darken(@main-background, 10%), 
+				              -4px 5px 0 darken(@main-background, 20%), 
+				              -6px 5px 0 darken(@main-background, 10%),
+				              -5px 6px 0 darken(@main-background, 20%), 
+				              -7px 6px 0 darken(@main-background, 10%),
+				              -6px 7px 0 darken(@main-background, 20%), 
+				              -8px 7px 0 darken(@main-background, 10%),
+				              -7px 8px 0 darken(@main-background, 20%), 
+				              -9px 8px 0 darken(@main-background, 10%),
+				              -8px 9px 0 darken(@main-background, 20%), 
+				              -10px 9px 0 darken(@main-background, 10%),
+				              -9px 10px 0 darken(@main-background, 20%), 
+				              -11px 10px 0 darken(@main-background, 10%),
+				              -10px 11px 0 darken(@main-background, 20%), 
+				              -12px 11px 0 darken(@main-background, 10%),
+				              -11px 12px 0 darken(@main-background, 20%), 
+				              -13px 12px 0 darken(@main-background, 10%),
+				              -12px 13px 0 darken(@main-background, 20%), 
+				              -14px 13px 0 darken(@main-background, 10%),
+				              -13px 14px 0 darken(@main-background, 20%), 
+				              -15px 14px 0 darken(@main-background, 10%),	
+				              -14px 15px 0 darken(@main-background, 20%), 
+				              -16px 15px 0 darken(@main-background, 10%),
+				              -15px 16px 0 darken(@main-background, 5%),
+				              -17px 16px 0 darken(@main-background, 5%),
+				              -16px 17px 0 darken(@main-background, 5%),
+				              -18px 17px 0 darken(@main-background, 5%),
+				              -17px 18px 0 darken(@main-background, 5%),
+				              -19px 18px 0 darken(@main-background, 5%),
+				              -18px 19px 0 darken(@main-background, 5%),
+				              -20px 19px 0 darken(@main-background, 5%),
+				              -19px 20px 0 darken(@main-background, 5%),
+				              -21px 20px 0 darken(@main-background, 5%),
+				              -20px 21px 0 darken(@main-background, 5%),
+				              -22px 21px 0 darken(@main-background, 5%),
+				              -21px 22px 0 darken(@main-background, 5%),
+				              -23px 22px 0 darken(@main-background, 5%),
+				              -22px 23px 0 darken(@main-background, 5%),
+				              -24px 23px 0 darken(@main-background, 5%),
+				              -23px 24px 0 darken(@main-background, 5%),
+				              -25px 24px 0 darken(@main-background, 5%),
+				              -24px 25px 0 darken(@main-background, 5%),
+				              -26px 25px 0 darken(@main-background, 5%),
+				              -25px 26px 0 darken(@main-background, 5%),
+				              -27px 26px 0 darken(@main-background, 5%),
+				              -26px 27px 0 darken(@main-background, 5%),
+				              -28px 27px 0 darken(@main-background, 5%),
+				              -27px 28px 0 darken(@main-background, 5%),
+				              -29px 28px 0 darken(@main-background, 5%),
+				              -28px 29px 0 darken(@main-background, 5%),
+				              -30px 29px 0 darken(@main-background, 5%),
+				              -29px 30px 0 darken(@main-background, 5%),
+				              -31px 30px 0 darken(@main-background, 5%);
+			}
+		}	    	
+	}
+}
+
+// Footer Logo
+.rt-footer-logo {
+	width: 81px;
+	height: 113px;
+	display: block;
+}
+.logoStyle (@index) when (@index > 0) {
+	(~".logo-type-preset@{index}") {
+		.rt-footer-logo {
+			background: url(../images/logo/preset@{index}/logo.png) 0 0 no-repeat;
+		}
+	}
+	.logoStyle (@index - 1);
+}
+.logoStyle (8);
+
+// Footer Copyright
+.fp-copyright {
+	text-align: right;
+}
+
+// Demo Typography
+.rt-dark-text {
+	color: #484848 !important;
+	text-shadow: -1px 1px 0 rgba(255, 255, 255, 0.3) !important;	
+}
+.rt-light-text {
+	color: #ffffff !important;
+	text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.2) !important;
+}
+.promo1, .promo2, .promo3 {
+	font-family: @praxis-font-light;
+	font-weight: normal;		
+}
+.promo1 {
+	font-size: 3.5em;
+	line-height: 1.5em;
+}
+.promo2 {
+	font-size: 2.5em;
+	line-height: 1.3em;
+}
+.promo3 {
+	font-size: 2.0em;
+	line-height: 1.3em;
+}
+
+// Demo Module Layout
+.rt-mbsb-table {
+	.rt-sb-table-col {
+		height: 38px;
+		vertical-align: middle;
+	}
+	.rt-mb-table-col {
+		height: 75px;
+		vertical-align: middle;
+	}
+}
+
+// Standard Inline Structural Adjustments
+body {
+	.rt-center {
+		text-align: center;
+	}
+	.rt-noborder {
+		border: 0 !important;
+		box-shadow: none !important;
+	}
+	.rt-floatleft {
+		float: left;
+		margin-right: 15px;
+		margin-left: 0;
+	}
+	.rt-floatright {
+		float: right;
+		margin-left: 15px;
+		margin-right: 0;
+	}
+	.rt-uppercase {
+		text-transform: uppercase;
+	}
+	.rt-lowercase {
+		text-transform: lowercase;
+	}	
+	.normalfont, .normalfont li {
+		font-size: 100% !important;
+		line-height: inherit !important;
+	}
+	.boldfont {
+		font-weight: bold !important;
+	}
+	.noitalic {
+		font-style: normal !important;
+	}
+	.nobold, .nobold a, .nobold li {
+		font-weight: normal !important;
+	}
+	.rt-displayinline {
+		display: inline !important;
+	}
+	.nomarginall, .rt-block.nomarginall, ul.nomarginall, li.nomarginall {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	}
+	.nopaddingall, .rt-block.nopaddingall, ul.nopaddingall, li.nopaddingall {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+	.nomargintop, .rt-block.nomargintop, ul.nomargintop, li.nomargintop {
+		margin-top: 0 !important;
+	}
+	.nomarginbottom, .rt-block.nomarginbottom, ul.nomarginbottom, li.nomarginbottom {
+		margin-bottom: 0 !important;
+	}
+	.nomarginleft, .rt-block.nomarginleft, ul.nomarginleft, li.nomarginleft {
+		margin-left: 0 !important;
+	}
+	.nomarginright, .rt-block.nomarginright, ul.nomarginright, li.nomarginright {
+		margin-right: 0 !important;
+	}
+	.nopaddingtop, .rt-block.nopaddingtop, ul.nopaddingtop, li.nopaddingtop {
+		padding-top: 0 !important;
+	}
+	.nopaddingbottom, .rt-block.nopaddingbottom, ul.nopaddingbottom, li.nopaddingbottom {
+		padding-bottom: 0 !important;
+	}
+	.nopaddingleft, .rt-block.nopaddingleft, ul.nopaddingleft, li.nopaddingleft {
+		padding-left: 0 !important;
+	}
+	.nopaddingright, .rt-block.nopaddingright, ul.nopaddingright, li.nopaddingright {
+		padding-right: 0 !important;
+	}
+	.smallmarginbottom {
+		margin-bottom: 5px !important;
+	}
+	.smallmargintop {
+		margin-top: 5px !important;
+	}
+	.smallmarginleft {
+		margin-left: 5px !important;
+	}
+	.smallmarginright {
+		margin-right: 5px !important;
+	}
+	.smallmarginall {
+		margin: 5px !important;
+	}	
+	.medmarginbottom {
+		margin-bottom: 10px !important;
+	}
+	.medmargintop {
+		margin-top: 10px !important;
+	}
+	.medmarginleft {
+		margin-left: 10px !important;
+	}
+	.medmarginright {
+		margin-right: 10px !important;
+	}
+	.medmarginall {
+		margin: 10px !important;
+	}
+	.largemarginbottom {
+		margin-bottom: 15px !important;
+	}
+	.largemargintop {
+		margin-top: 15px !important;
+	}
+	.largemarginleft {
+		margin-left: 15px !important;
+	}
+	.largemarginright {
+		margin-right: 15px !important;
+	}
+	.largemarginall {
+		margin: 15px !important;
+	}
+	.smallpaddingbottom {
+		padding-bottom: 5px !important;
+	}
+	.smallpaddingtop {
+		padding-top: 5px !important;
+	}
+	.smallpaddingleft {
+		padding-left: 5px !important;
+	}
+	.smallpaddingright {
+		padding-right: 5px !important;
+	}
+	.smallpaddingall {
+		padding: 5px !important;
+	}
+	.medpaddingbottom {
+		padding-bottom: 10px !important;
+	}
+	.medpaddingtop {
+		padding-top: 10px !important;
+	}
+	.medpaddingleft {
+		padding-left: 10px !important;
+	}
+	.medpaddingright {
+		padding-right: 10px !important;
+	}
+	.medpaddingall {
+		padding: 10px !important;
+	}
+	.largepaddingbottom {
+		padding-bottom: 15px !important;
+	}
+	.largepaddingtop {
+		padding-top: 15px !important;
+	}
+	.largepaddingleft {
+		padding-left: 15px !important;
+	}
+	.largepaddingright {
+		padding-right: 15px !important;
+	}
+	.largepaddingall {
+		padding: 15px !important;
+	}
+	.subsmallmarginbottom {
+		margin-bottom: -5px !important;
+	}
+	.subsmallmargintop {
+		margin-top: -5px !important;
+	}
+	.subsmallmarginleft {
+		margin-left: -5px !important;
+	}
+	.subsmallmarginright {
+		margin-right: -5px !important;
+	}
+	.subsmallmarginall {
+		margin: -5px !important;
+	}	
+	.submedmarginbottom {
+		margin-bottom: -10px !important;
+	}
+	.submedmargintop {
+		margin-top: -10px !important;
+	}
+	.submedmarginleft {
+		margin-left: -10px !important;
+	}
+	.submedmarginright {
+		margin-right: -10px !important;
+	}
+	.submedmarginall {
+		margin: -10px !important;
+	}
+	.sublargemarginbottom {
+		margin-bottom: -15px !important;
+	}
+	.sublargemargintop {
+		margin-top: -15px !important;
+	}
+	.sublargemarginleft {
+		margin-left: -15px !important;
+	}
+	.sublargemarginright {
+		margin-right: -15px !important;
+	}
+	.sublargemarginall {
+		margin: -15px !important;
+	}	
+	.rt-relative {
+		position: relative;
+	}
+	[class^="custom"] {  
+		&.largepaddingright, 
+		&.largepaddingleft, 
+		&.largepaddingtop, 
+		&.largepaddingbottom, 
+		&.largepaddingall,
+		&.medpaddingright, 
+		&.medpaddingleft, 
+		&.medpaddingtop, 
+		&.medpaddingbottom,
+		&.medpaddingall, 
+		&.smallpaddingright, 
+		&.smallpaddingleft, 
+		&.smallpaddingtop, 
+		&.smallpaddingbottom, 
+		&.smallpaddingall,
+		&.largemarginright, 
+		&.largemarginleft, 
+		&.largemargintop, 
+		&.largemarginbottom,
+		&.largemarginall,
+		&.medmarginright, 
+		&.medmarginleft, 
+		&.medmargintop, 
+		&.medmarginbottom, 
+		&.medmarginall,
+		&.smallmarginright, 
+		&.smallmarginleft, 
+		&.smallmargintop, 
+		&.smallmarginbottom,
+		&.smallmarginall,		
+		&.sublargemarginright, 
+		&.sublargemarginleft, 
+		&.sublargemargintop, 
+		&.sublargemarginbottom,
+		&.sublargemarginall,
+		&.submedmarginright, 
+		&.submedmarginleft, 
+		&.submedmargintop, 
+		&.submedmarginbottom, 
+		&.submedmarginall,
+		&.subsmallmarginright, 
+		&.subsmallmarginleft, 
+		&.subsmallmargintop, 
+		&.subsmallmarginbottom,
+		&.subsmallmarginall {
+			padding: 0 0 0 0 !important;margin: 0 0 0 0 !important;
+		}                
+		&.rt-floatleft, &.rt-floatright {
+			float: none;
+			margin: 0 0 0 0 !important;
+		}                   
+	}
+}    
+
+// RTL Stuff
+body.rtl {
+	.rt-floatleft {
+		float: right;
+		margin-right: 0;
+		margin-left: 15px;
+	}
+	.rt-floatright {
+		float: left;
+		margin-left: 0;
+		margin-right: 15px;
+	}
+	.nomarginleft, .rt-block.nomarginleft, ul.nomarginleft, li.nomarginleft {
+		margin-right: 0;
+	}
+	.nomarginright, .rt-block.nomarginright, ul.nomarginright, li.nomarginright {
+		margin-left: 0;
+	}
+	.nopaddingleft, .rt-block.nopaddingleft, ul.nopaddingleft, li.nopaddingleft {
+		padding-right: 0;
+	}
+	.nopaddingright, .rt-block.nopaddingright, ul.nopaddingright, li.nopaddingright {
+		padding-left: 0;
+	}
+	.smallmarginleft {
+		margin-right: 5px;
+	}
+	.smallmarginright {
+		margin-left: 5px;
+	}
+	.medmarginleft {
+		margin-right: 10px;
+	}
+	.medmarginright {
+		margin-left: 10px;
+	}
+	.largemarginleft {
+		margin-right: 15px;
+	}
+	.largemarginright {
+		margin-left: 15px;
+	}
+	.smallpaddingleft {
+		padding-right: 5px;
+	}
+	.smallpaddingright {
+		padding-left: 5px;
+	}
+	.medpaddingleft {
+		padding-right: 10px;
+	}
+	.medpaddingright {
+		padding-left: 10px;
+	}
+	.largepaddingleft {
+		padding-right: 15px;
+	}
+	.largepaddingright {
+		padding-left: 15px;
+	}
+    .subsmallmarginleft {
+		margin-right: -5px;
+	}
+	.subsmallmarginright {
+		margin-left: -5px;
+	}
+	.submedmarginleft {
+		margin-right: -10px;
+	}
+	.submedmarginright {
+		margin-left: -10px;
+	}
+	.sublargemarginleft {
+		margin-right: -15px;
+	}
+	.sublargemarginright {
+		margin-left: -15px;
+	}
+	.rt-demo-block {
+		float: right;
+	}
+}

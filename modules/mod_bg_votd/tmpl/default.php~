@@ -1,0 +1,6 @@
+<?php
+$votd = new VerseOfTheDay("http://www.biblegateway.com/usage/votd/rss/votd.rdf?" . $version_id);
+?>
+</a>
+<br>
+<?php echo $votd->verse; ?>

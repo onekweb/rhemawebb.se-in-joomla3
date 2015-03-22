@@ -1,0 +1,89 @@
+// Colors ----------------------
+@white:							#ffffff;
+@black: 						#000000;
+@dark-grey:                     #434343;
+@grey:                          #606060;
+@light-grey:                    #cccccc;
+
+// Fonts -----------------------
+@base-font-size:				14px;
+@base-line-height:				24px;
+
+@font-face {
+    font-family: 'NexaLight';
+    src: url('../fonts/nexalight-webfont.eot');
+    src: url('../fonts/nexalight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nexalight-webfont.woff') format('woff'),
+         url('../fonts/nexalight-webfont.ttf') format('truetype'),
+         url('../fonts/nexalight-webfont.svg#NexaLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NexaBold';
+    src: url('../fonts/nexabold-webfont.eot');
+    src: url('../fonts/nexabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/nexabold-webfont.woff') format('woff'),
+         url('../fonts/nexabold-webfont.ttf') format('truetype'),
+         url('../fonts/nexabold-webfont.svg#NexaBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@praxis-font-light:    			'NexaLight', Arial, Verdana, Helvetica, sans-serif;
+@praxis-font-bold: 				'NexaBold', Arial, Verdana, Helvetica, sans-serif;
+
+// Menu ------------------------
+@menu-font-family:				@praxis-font-light;
+@menu-font-size:				15px;
+@menu-line-height:				24px;
+@menu-item-radius:				5px;
+
+@menu-text-color:				#cccccc;
+@menu-text-shadow:				rgba(0, 0, 0, 0.3);
+@menu-text-hover:				#ffffff;
+@menu-subtext-color:			darken(@menu-text-color, 10%);
+@menu-arrow-color:				darken(@menu-text-color, 10%);
+@menu-mobile-gradient:			lighten(@menu-drop-back,10%);
+@menu-mobile-back:				transparent;
+@menu-border: 					#cbcbcb;
+@menu-drop-back:				#f2f2f2;
+@menu-drop-shadow:				0px 2px 2px rgba(0,0,0,0.1);
+@menu-inset-shadow:				~"inset 0px 1px 0px #cbcbcb, inset 0px 2px 0px #ffffff";
+@menu-full-shadow:				~"inset 0px 1px 0px #cbcbcb, inset 0px 2px 0px #ffffff, 0px 1px 1px rgba(0,0,0,0.1)";
+@module-header-color:			@menu-text-color;
+@module-text-color:				#ffffff;
+
+// Body ------------------------
+@body-background:				#f5f5f5;
+@body-background2:				#f0f0f0;
+@body-background3:				#fcfcfc;
+@body-background4:				#eaeaea;
+@body-text:						#6e6e6e;
+@body-text-light:				#aaaaaa;
+@body-title:					#303030;
+@body-border:					#d5d5d5;
+@body-border2:					#dddddd;
+@body-border3:					#d1d1d1;
+@body-contrast:					#ffffff;
+
+// Form Feedbacks --------------
+@warning-text:             		#c09853;
+@warning-background:       		#fcf8e3;
+@warning-border:           		darken(spin(@warning-background, -10), 3%);
+
+@error-text:               		#b94a48;
+@error-background:         		#f2dede;
+@error-border:             		darken(spin(@error-background, -10), 3%);
+
+@success-text:             		#468847;
+@success-background:       		#dff0d8;
+@success-border:           		darken(spin(@success-background, -10), 5%);
+
+@info-text:                		#3a87ad;
+@info-background:          		#d9edf7;
+@info-border:              		darken(spin(@info-background, -10), 7%);
+
+@monoFontFamily:       			Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// Horizontal forms & lists ----
+@horizontalComponentOffset:   	160px;

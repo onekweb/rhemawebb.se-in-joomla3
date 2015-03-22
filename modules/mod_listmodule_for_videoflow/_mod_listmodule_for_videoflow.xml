@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="module" client="site" method="upgrade">
+	<name>List Module for VideoFlow</name>
+	<author>Kirungi F. Fideri</author>
+	<creationDate>June 2012</creationDate>
+	<copyright>(C) Kirungi F. Fideri, 2012 - 2014. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>fideri@fidsoft.com</authorEmail>
+	<authorUrl>http://www.fidsoft.com</authorUrl>
+	<version>1.2.0</version>
+	<description>MOD_LISTMODULE_FOR_VIDEOFLOW_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_listmodule_for_videoflow">mod_listmodule_for_videoflow.php</filename>
+    <filename>mod_listmodule_for_videoflow.xml</filename>
+    <filename>index.html</filename>
+    <filename>helper.php</filename>
+    <folder>tmpl</folder>
+    <folder>language</folder>
+	</files>
+	<languages folder="language">  
+		<language tag="en-GB">en-GB/en-GB.mod_listmodule_for_videoflow.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_listmodule_for_videoflow.sys.ini</language>
+	</languages>
+</extension>
